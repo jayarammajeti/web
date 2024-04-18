@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayaram Majeti | Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        .header-container {
+            margin-bottom: 50px;
+        }
+
+        #title {
+            font-size: 2.5em; /* Makes the title bigger */
+            color: #E63946; /* A vibrant color for the title */
+            margin-bottom: 200px;
+            text-shadow: 2px 2px 4px #000000; /* Adds a subtle shadow to the title for depth */
+            font-weight: 600; /* Makes the font slightly bolder */
+
+        }
+
+        #presents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Adds space between gifts */
+        }
+
+        img {
+            max-width: 100px; /* Adjusts the size of gift images */
+            transition: transform 0.2s; /* Smooth transition for scaling */
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Scales up gift images on hover */
+        }
+
+        .footer {
+            margin-top: 220px; /* Ensures the footer is at the bottom of the page */
+        }
+        #chooseAnother {
+            display: block; /* Makes the button a block-level element */
+            margin: 40px auto; /* Centers the button horizontally with automatic margins */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff; /* White text color */
+            background-color: #007bff; /* Bootstrap primary button color for reference */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            outline: none; /* Removes the outline to keep the design clean */
+        }
+
+        #chooseAnother:hover {
+            background-color: #0056b3; /* Darker shade when hovered for visual feedback */
+        }
+
+        #chooseAnother:active {
+            background-color: #004094; /* Even darker shade to simulate a click */
+            transform: translateY(2px); /* Slight movement to simulate pressing down */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Portfolio</h1>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./pictures">Pictures</a></li>
+                    <li><a href="./schedule">Schedule</a></li>
+                    <li><a href="./media">Media</a></li>
+                    <li><a href="./contact">Contact</a></li>
+                    <li><a href="./game">Tic Tac Toe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="title">Click a present to open it</div>
+    <div id="presents"></div>
+    <button id="chooseAnother" style="display:none;">Choose Another Present</button>
+
+
+
+    <script src="/js/present-sources.js"></script>
+    <script src="/js/present.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/main.js"></script>
+
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+          <div class="contact-info centered">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jayaram.majeti@siu.edu">jayaram.majeti@siu.edu</a></p>
+            <p><i class="fas fa-phone"></i> Phone: 618-901-6361</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: 407 W College Street, Carbondale, IL</p>
+          </div>        
+        </div>
+    </footer>
+</body>
+</html>

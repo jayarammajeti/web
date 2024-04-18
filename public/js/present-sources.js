@@ -1,0 +1,22 @@
+const PRESENT_SOURCES = [
+  'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif',
+  'https://media.giphy.com/media/LEcRaYyUptIxG/giphy.gif',
+  'https://media.giphy.com/media/3BBv1D4AFbJkY/giphy.gif',
+  'https://media.giphy.com/media/TXjLxmmvnEvt6genJJ/giphy.gif',
+  'https://media.giphy.com/media/GknfGjiYhsFQk/giphy.gif',
+  'https://media.giphy.com/media/BQgCNs5uHQGrKt9GwH/giphy.gif',
+  'https://media.giphy.com/media/QLqKfeTQ4r8hq/giphy.gif',
+  'https://media.giphy.com/media/ByIxMImf22dUydojok/giphy.gif',
+  'https://media.giphy.com/media/giKdkKxdDWecg524cE/giphy.gif',
+  'https://media.giphy.com/media/l0HebeyLwfD0TRBuw/giphy.gif',
+  'https://media.giphy.com/media/26AHG5KGFxSkUWw1i/giphy.gif',
+  'https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif',
+  'https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif',
+  'https://media.giphy.com/media/3o7TKRwpns23QMNNiE/giphy.gif',
+  'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif',
+  'https://media.giphy.com/media/l1J3preURPiwjRPvG/giphy.gif',
+  'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif',
+  'https://media.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif',
+  'https://media.giphy.com/media/3o7TKU8RvQuomFfUUU/giphy.gif',
+  'https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif'
+];

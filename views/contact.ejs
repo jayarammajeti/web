@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayaram Majeti | Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        function Submit() {
+            var emailInput = document.getElementById('email').value;
+            var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            var addressInput = document.getElementById('address').value.trim();
+            var commentsInput = document.getElementById('comments').value.trim();
+            var n1 = document.getElementById('name').value;
+            if (n1.length<=1){
+                alert("Please enter a valid  name."); 
+                return false;
+            }
+            if (!emailInput.match(regex)) {
+                alert("Please enter a valid email address."); 
+                return false;
+            }
+            else if (addressInput.length === 0) {
+                alert('Please enter a valid address.');
+                return false;
+            }
+            else if (commentsInput.length === 0 || commentsInput.length>40) {
+                alert('Comments cannot be just whitespace or greater than 40 words');
+                return false;
+        
+            }
+            else{
+                if(confirm("Your form is successfully submitted. CLICK OK TO GET SOME SECRET GIFTS ")) {
+                window.location.href = "/gifts"; 
+            }
+            return false;
+        }
+    }
+        
+            </script>
+                
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Portfolio</h1>
+            <nav>
+                <ul class="navigation">
+                    <ul class="navigation">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./about">About</a></li>
+                        <li><a href="./pictures">Pictures</a></li>
+                        <li><a href="./schedule">Schedule</a></li>
+                        <li><a href="./media">Media</a></li>
+                        <li><a href="./contact">Contact</a></li>
+                        <li><a href="./game">Tic Tac Toe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="feedback" class="feedback-section" style="background-color: aquamarine;">
+        <h2>Feedback Form</h2>
+        <form action="#" onsubmit="return Submit()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+    
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"  placeholder="Your Address">
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            <small>Format: 123-456-7890</small>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+    
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"  placeholder="Your Comments" rows="4"></textarea>
+    
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </section>    
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+          <div class="contact-info centered">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jayaram.majeti@siu.edu">jayaram.majeti@siu.edu</a></p>
+            <p><i class="fas fa-phone"></i> Phone: 618-901-6361</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: 407 W College Street, Carbondale, IL</p>
+          </div>        
+        </div>
+    </footer>
+    
+</body>
+</html>

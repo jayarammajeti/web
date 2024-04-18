@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayaram Majeti | Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body style=" margin: 0; font-family: 'Work Sans', Arial, sans-serif; background-color: #ecf0f1; height: 60vh;">
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Portfolio</h1>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./pictures">Pictures</a></li>
+                    <li><a href="./schedule">Schedule</a></li>
+                    <li><a href="./media">Media</a></li>
+                    <li><a href="./contact">Contact</a></li>
+                    <li><a href="./game">Tic Tac Toe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="tic-tac-toe-game">
+        <h1 style="color: #4a4a4a;">Tic-Tac-Toe</h1>
+        <div id="grid" style="display: grid; grid-template-columns: repeat(4, 1fr); width: 500px; height: 500px; align-items: center;">
+          <div data-index="0"></div>
+          <div data-index="1"></div>
+          <div data-index="2"></div>
+          <div data-index="3"></div>
+
+          <div data-index="4"></div>
+          <div data-index="5"></div>
+          <div data-index="6"></div>
+          <div data-index="7"></div>
+
+          <div data-index="8"></div>
+          <div data-index="9"></div>
+          <div data-index="10"></div>
+          <div data-index="11"></div>
+
+          <div data-index="12"></div>
+          <div data-index="13"></div>
+          <div data-index="14"></div>
+          <div data-index="15"></div>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+          <div class="contact-info centered">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jayaram.majeti@siu.edu">jayaram.majeti@siu.edu</a></p>
+            <p><i class="fas fa-phone"></i> Phone: 618-901-6361</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: 407 W College Street, Carbondale, IL</p>
+          </div>        
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
