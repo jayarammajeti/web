@@ -1,23 +1,21 @@
+// db.js
 const mongoose = require('mongoose');
 
-// Ensure you use the actual environment variable here.
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://jayarammajeti7:Jayaram@07@cluster0.ajao1oa.mongodb.net/';
+const mongoDBUrl = process.env.MONGODB_URI || 'mongodb+srv://jayarammajeti7:Jayaram07@cluster0.ajao1oa.mongodb.net/Feedback_form';
 
-mongoose.connect(mongoURI, {
+mongoose.connect(mongoDBUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}).then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
 
-const feedbackSchema = new mongoose.Schema({
-    name: String,
-    address: String,
-    phone: String,
-    email: { type: String, unique: true },
-    comments: String,
-    customerId: String
 });
 
-const Feedback = mongoose.model('Feedback', feedbackSchema);
+mongoose.connection.on('connected', () => {
+    console.log('MongoDB connected successfully');
+});
 
-module.exports = Feedback;
+mongoose.connection.on('error', (err) => {
+    console.error('MongoDB connection error:', err);
+    process.exit(-1);
+});
+
+module.exports = mongoose;
