@@ -8,36 +8,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script>
         function Submit() {
-            var emailInput = document.getElementById('email').value;
-            var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            var addressInput = document.getElementById('address').value.trim();
-            var commentsInput = document.getElementById('comments').value.trim();
-            var n1 = document.getElementById('name').value;
-            if (n1.length<=1){
-                alert("Please enter a valid  name."); 
-                return false;
-            }
-            if (!emailInput.match(regex)) {
-                alert("Please enter a valid email address."); 
-                return false;
-            }
-            else if (addressInput.length === 0) {
-                alert('Please enter a valid address.');
-                return false;
-            }
-            else if (commentsInput.length === 0 || commentsInput.length>40) {
-                alert('Comments cannot be just whitespace or greater than 40 words');
-                return false;
-        
-            }
-            else{
-                if(confirm("Your form is successfully submitted. CLICK OK TO GET SOME SECRET GIFTS ")) {
-                window.location.href = "/gifts"; 
-            }
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value.trim(),
+                phone: document.getElementById('phone').value,
+                comments: document.getElementById('comments').value.trim()
+            };
+
+            fetch('/submit-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.message.includes("Thank you")) {
+                    window.location.href = "/gifts";
+                }
+            })
+            .catch(error => console.error('Error:', error));
+
             return false;
         }
-    }
-        
             </script>
                 
 </head>
