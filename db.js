@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
-const mongoURI = process.env.MONGODB_URI || process.env.MONGO_URL;
+// Ensure you use the actual environment variable here.
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://jayarammajeti7:Jayaram@07@cluster0.ajao1oa.mongodb.net/';
 
-mongoose.connect('mongoURI', {
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('MongoDB connection error:', err));
 
 const feedbackSchema = new mongoose.Schema({
     name: String,
