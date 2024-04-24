@@ -1,12 +1,10 @@
-// server.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const mongoose = require('./db'); // Importing the configured mongoose from db.js
+const mongoose = require('./db'); 
 
 const app = express();
 
-// Schema and Model for Feedback
 const feedbackSchema = new mongoose.Schema({
     name: String,
     address: String,
@@ -18,16 +16,13 @@ const feedbackSchema = new mongoose.Schema({
 
 const Feedback = mongoose.model('Feedback', feedbackSchema);
 
-// Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// View engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Define routes
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -84,7 +79,6 @@ app.post('/submit-feedback', async (req, res) => {
     }
 });
 
-// Start the server
 const PORT = process.env.PORT || 3020;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

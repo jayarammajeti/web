@@ -1,4 +1,3 @@
-// db.js
 const mongoose = require('mongoose');
 
 const mongoDBUrl = process.env.MONGODB_URI || 'mongodb+srv://jayarammajeti7:Jayaram07@cluster0.ajao1oa.mongodb.net/Feedback_form';
